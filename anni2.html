@@ -1,0 +1,175 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css" />
+        <link rel="stylesheet" href="style.css">
+    <style>
+        .register .nav-tabs .nav-link:hover {
+            border: none;
+        }
+
+        .text-align {
+            margin-top: -3%;
+            margin-bottom: -9%;
+            color:#bd6310;
+            padding: 10%;
+            margin-left: 30%;
+            text-align: center;
+        }
+
+        .form-new {
+            margin-right: 20%;
+            margin-left: 20%;
+            
+        }
+
+        .register-heading {
+          text-align: center;
+            color:#1d0c02 ;
+        }
+
+        .register-heading h1 {
+            margin-left: 2;
+            margin-bottom: 10%;
+            color: #1d0c02;
+        }
+
+        .register {
+            background:-webkit-linear-gradient(white,pink);
+            margin-top: 1%;
+            padding: 1%;
+            border-radius: 2.5rem;
+            background-image: url('photos/anni22.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .btnSubmit {
+            width: 40%;
+            border-radius: 1rem;
+            background-color: #1d0c02;
+            
+            cursor: pointer;
+            margin-right: 6%;
+            color: rgb(221, 221, 226);
+            margin-top: 14%;
+            font-size: 25px;
+            margin-left: 20%;
+        
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            align-self: stretch;
+       }
+    </style>
+</head>
+
+<body>
+   <header>
+
+   </header>
+        
+    <div class="container register">
+    <div class="row">
+   <div class="col-md-12">
+ <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel"
+             aria-labelledby="home-tab">
+         <h1 class="register-heading text-nowrap">Fill Form for Order</h1>
+         <div class="row register-form">
+        <div class="col-md-12">
+           <form autocomplete="off">
+                                <div class="form-group">
+                                    <input type="text" name="Name" id="name" class="form-control"
+                                        placeholder="Your Name *" value="" required="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Email" id="email" class="form-control"
+                                        placeholder="Your Email *" value="" required="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" name="Phone" id="phone" class="form-control"
+                                        placeholder="Your Contact Number *" value="" required="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="textarea" name="Address" id="address" class="form-control"
+                                        placeholder="Your Address *" value="" required="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" name="Date" id="date" class="form-control"
+                                        placeholder="Enter the Date of Event*" value="" required="" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="order">
+                                        
+                                        <option>FLORAL CAKE (1kg) - Rs.800</option>
+                                        <option>FLORAL CAKE (2kg)- Rs.1600</option>
+                                        <option>FLORAL CAKE (3kg)- Rs.2500</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="btnSubmit">
+                                    <input type="button" name="submit" class="btnSubmit btn-block" onclick="gotowhatsapp()" value="Submit" />
+                                   
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function gotowhatsapp() {
+
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var address = document.getElementById("address").value;
+            var date = document.getElementById("date").value;
+            var order = document.getElementById("order").value;
+            
+
+            var url = "https://wa.me/+919322872844?text="
+                + "Name: " + name + "%0a"
+                + "Phone: " + phone + "%0a"
+                + "Email: " + email + "%0a"
+                + "Address: " + address +"%0a"
+                + "Date: " + date +"%0a"
+                + "Order: " + order ;
+
+            window.open(url, '_blank').focus();
+        }
+    </script>
+   
+<a href="https://wa.me/+919322872844?text=Hi%20There!"
+class="float"
+style="
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 70px;
+  right: 120px;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px #999;
+  "
+>
+<img
+  src="https://trickuweb.com/whatsapp.png"
+  alt=""
+  height="60px"
+  width="60px"
+/>
+</a>
+<br>
+
+<a href="index.html"><button class="btn">back to Home</button></a>
+</body>
+</html>
