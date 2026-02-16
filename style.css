@@ -28,7 +28,7 @@ a{
     height: 100vh;
     background-color: #1d0c02;
     position: relative;
-    background-image: url('photos/bg4.png');
+    background-image: url('bg4.png');
     background-repeat: no-repeat;
     background-size: 750px;
     background-position: right bottom;
@@ -1036,5 +1036,6 @@ nav{
     color: orangered;
     padding: .5rem 0;
 }
+
 
 
